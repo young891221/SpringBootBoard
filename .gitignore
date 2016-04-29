@@ -3,4 +3,6 @@
 build/
 .classpath
 .project
+bower_components/
+node_modules/
 
