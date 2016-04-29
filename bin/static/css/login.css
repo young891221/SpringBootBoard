@@ -1,0 +1,41 @@
+body {
+	background: #333;
+	color: white;
+	font-family: "Malgun Gothic";
+}
+
+h1,h2,h3,h4,h5,h6 {
+	padding:0;
+	margin:0;
+	border:0;
+}
+
+a {
+	color: white;
+}
+
+img {
+	vertical-align: middle;
+}
+
+.layout {
+	text-align: center;
+	margin: 300px auto 0;
+}
+
+#btnLogin {
+	margin: 15px 0 0 7px;
+	background: url(/resources/images/google_login.png) no-repeat;
+	cursor:pointer;
+    border: none;
+}
+
+.description {
+	font-style: italic;
+}
+
+.alert {
+	margin:auto;
+	width:500px;
+}
+
