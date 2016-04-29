@@ -12,7 +12,8 @@
 <body class="no-skin">
 	<div class="container-fluid">
 		<div class="layout">
-			<h3><img src="/resources/images/login_logo.png"/> Front Pilot</h3>
+			<h2> Spring Board Auth </h2>
+			<br>
 			
 			<#-- GOOGLE SIGNIN -->
 			<form id="go_signin" action="/signin/google" method="POST">
