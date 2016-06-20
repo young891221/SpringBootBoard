@@ -25,6 +25,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.yj.aop.AspectAnnotation;
 import com.yj.common.Paging;
 import com.yj.common.PagingObject;
 import com.yj.domain.Board;
@@ -49,6 +50,7 @@ public class BoardRestController {
 	private BoardService boardService;
 
 	@RequestMapping(value = "/insertBoardForm", method = RequestMethod.POST)
+	@AspectAnnotation
 	public String insertBoardForm(@RequestBody Board board, HttpSession session) {
 		
 		String resultMessage = "게시판 생성에 실패하였습니다.";

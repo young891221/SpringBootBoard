@@ -34,7 +34,7 @@
  
     <!-- root 로거 기본 설정 -->
     <root>
-		<priority value="warn" />
+		<priority value="info" />
 		<appender-ref ref="console" />
 	</root>
 	

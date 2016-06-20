@@ -5,4 +5,7 @@ build/
 .project
 bower_components/
 node_modules/
+.idea/
+.gitignore
+SpringBootBoard.iml
 
