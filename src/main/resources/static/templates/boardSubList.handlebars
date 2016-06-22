@@ -1,0 +1,64 @@
+		
+		
+			{{#list}}
+				<tr>
+					<td>{{board_id}}</td>
+					<td>{{board_group}}</td>
+					{{#isStatus}}
+						<td><a href="javascript:window.location.href='/selectOneBoard?board_id={{board_id}}'">[임시]{{board_title}}</a></td>
+					{{else}}
+						<td><a href="javascript:window.location.href='/selectOneBoard?board_id={{board_id}}'">[공지]{{board_title}}</a></td>
+					{{/isStatus}}
+					<td>{{board_insert_date}}</td>
+					{{#isUpdateDate}}
+						<td>{{board_update_date}}</td>
+					{{else}}
+						<td></td>
+					{{/isUpdateDate}}
+					<td>{{board_view_count}}</td>
+				</tr>
+			{{/list}}
+			
+			
+			<!-- Pagination -->
+			<!--
+			<#--
+			<div class="pagination pagination-centered">
+			  <ul class="pagination">
+			  	<li><a ng-href="/selectOptionBoard">&laquo;</a></li>
+			    <div ng-if="pagingVO.startPage > pagingVO.pageBlock">
+			  		<li><a ng-href="/selectOptionBoard?page={{pagingVO.startPage}} - {{pagingVO.pageBlock}}">&lsaquo;</a></li>
+			  	</div>
+			  	<div ng-if="pagingVO.startPage < pagingVO.pageBlock">
+			  		<li><a href="#">&lsaquo;</a></li>
+			    </div>
+
+					<div ng-repeat="i in range">
+						<div ng-if="pagingVO.currentPage = i">
+	  						<li class="active">
+	  							<a ng-href="/selectOptionBoard?page=i">{{i}}
+	  								<span class="sr-only"></span>
+	  							</a>
+	  						</li>
+  						</div>
+  						<div ng-if="pagingVO.currentPage != i">
+  							<li>
+  							<a ng-href="/selectOptionBoard?page=i">{{i}} 
+  								<span class="sr-only"></span>
+  							</a>
+  							</li>
+  						</div>
+  					</div>	
+					
+				 <div ng-if="pagingVO.endPage < pagingVO.pageCount">
+			    	<li><a href="/selectOptionBoard?page=${pagingVO.startPage + pagingVO.pageBlock}">&rsaquo;</a></li>
+			  	 </div>
+			  	 <div ng-if="pagingVO.endPage > pagingVO.pageCount">
+			  	 	<li><a href="#">&rsaquo;</a></li>
+			  	 </div>
+			  	 <li><a ng-href="/selectOptionBoard?page={{pagingVO.pageCount}}">&raquo;</a></li>
+			  </ul>
+			</div>
+			-->
+			-->
+		

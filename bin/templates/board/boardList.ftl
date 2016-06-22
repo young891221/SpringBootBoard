@@ -3,7 +3,9 @@
 <head>
 <title>ZUM Board</title>
 <link href="/resources/vendor/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<script src="/resources/vendor/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="/resources/vendor/bower_components/jquery/jquery.js"></script>
+<script src="/resources/vendor/bower_components/handlebars/handlebars.js"></script>
+<script src="/resources/js/templates.js"></script>
 <script src="${helper.src('/resources/js/boardScriptList.js')}"></script>
 </head>
 <body>

@@ -1,14 +1,10 @@
 package com.yj.domain;
 
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.DynamicUpdate;
@@ -35,7 +31,7 @@ public class Member implements Serializable{
 	
 
 	@Id
-	@GeneratedValue
+	//@GeneratedValue
 	@Column(name = "member_id", updatable=false)
 	private int member_id;
 	
@@ -54,8 +50,8 @@ public class Member implements Serializable{
 	@Column(name = "userId")
 	private String userId;
 	
-	@OneToMany(mappedBy = "member_id")
-	private List<Board> boards = new ArrayList<Board>();
+	/*@OneToMany(mappedBy = "member_id")
+	private List<Board> boards = new ArrayList<Board>();*/
 	
 
 	public int getMember_id() {
@@ -96,14 +92,6 @@ public class Member implements Serializable{
 
 	public void setUserId(String userId) {
 		this.userId = userId;
-	}
-
-	public List<Board> getBoards() {
-		return boards;
-	}
-
-	public void setBoards(List<Board> boards) {
-		this.boards = boards;
 	}
 
 	

@@ -8,4 +8,5 @@ node_modules/
 .idea/
 .gitignore
 SpringBootBoard.iml
-
+bin/
+src/main/resources/static/vendor
