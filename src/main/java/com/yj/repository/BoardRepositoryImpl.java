@@ -18,6 +18,7 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import com.sun.media.jfxmedia.logging.Logger;
 import com.yj.domain.Board;
 
 @Repository
@@ -36,7 +37,7 @@ public class BoardRepositoryImpl implements BoardRepository {
 			board_id =  sessionFactory.getCurrentSession().createCriteria(Board.class)
 					.setProjection(Projections.max("board_id")).uniqueResult();
 		} catch (HibernateException e) {
-			log.debug("selectCountBoard failed: "+e.toString());
+			log.error("selectCountBoard failed: "+e.toString());
 		}
 		return board_id;
 	}
@@ -47,6 +48,7 @@ public class BoardRepositoryImpl implements BoardRepository {
 		try {
 			sessionFactory.getCurrentSession().saveOrUpdate(board);
 			result = true;
+			log.debug("result = "+result);
 		} catch (Exception e) {
 			log.debug("insertBoardForm failed: "+e.toString());
 		}

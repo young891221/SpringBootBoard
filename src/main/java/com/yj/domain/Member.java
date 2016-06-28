@@ -31,6 +31,7 @@ public class Member implements Serializable{
 	
 
 	@Id
+	//@GeneratedValue
 	@Column(name = "member_id", updatable=false)
 	private int member_id;
 	
@@ -43,11 +44,14 @@ public class Member implements Serializable{
 	@Column(name = "member_image")
 	private String member_image;
 	
-	@Column(name = "member_authority")
+	@Column(name = "member_otp")
 	private String authorities;
 	
 	@Column(name = "userId")
 	private String userId;
+	
+	/*@OneToMany(mappedBy = "member_id")
+	private List<Board> boards = new ArrayList<Board>();*/
 	
 
 	public int getMember_id() {

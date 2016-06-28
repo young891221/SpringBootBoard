@@ -12,68 +12,65 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "board")
-public class Board implements Serializable{
-	// 객체를 파일에 쓰거나 전송하기 위해 직렬화를 하는데 그러기 위해 Serializable 인터페이스 구현 
+public class Board implements Serializable {
+	// 객체를 파일에 쓰거나 전송하기 위해 직렬화를 하는데 그러기 위해 Serializable 인터페이스 구현
 	private static final long serialVersionUID = -521108561135879292L;
-	//serialVersionUID는 직렬화에 사용되는 고유 아이디
-	
+	// serialVersionUID는 직렬화에 사용되는 고유 아이디
+
 	public Board(Member member_id, String member_pw) {
 		super();
 		this.member_id = member_id;
 		this.member_pw = member_pw;
 	}
-	
+
 	public Board() {
 		super();
 	}
 
 	/*
-	 * @GeneratedValue는 주키의 값을 위한 자동 생성 전략을 명시
-	 * AUTO는 특정 DB에 맞게 자동 선택
+	 * @GeneratedValue는 주키의 값을 위한 자동 생성 전략을 명시 AUTO는 특정 DB에 맞게 자동 선택
 	 */
 	@Id
-	//@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "board_id", updatable=false)
+	//@GeneratedValue
+	@Column(name = "board_id", updatable = false)
 	private int board_id;
-	
+
 	@Column(name = "board_group")
 	private String board_group;
-	
+
 	@Column(name = "board_title")
 	private String board_title;
-	
+
 	@Column(name = "board_sub_title")
 	private String board_sub_title;
-	
+
 	@Column(name = "board_image")
 	private String board_image;
-	
+
 	@Column(name = "board_content")
 	private String board_content;
-	
+
 	@Column(name = "board_view_count")
 	private int board_view_count;
-	
+
 	@Column(name = "board_status")
 	private int board_status;
-	
-	@Column(name = "board_insert_date", updatable=false)
+
+	@Column(name = "board_insert_date", updatable = false)
 	private Date board_insert_date;
-	
-	@Column(name = "board_update_date", insertable=false)
+
+	@Column(name = "board_update_date", insertable = false)
 	private Date board_update_date;
-	
-	@Column(name = "board_delete_date", insertable=false)
+
+	@Column(name = "board_delete_date", insertable = false)
 	private Date board_delete_date;
-	
+
 	@ManyToOne
-	@JoinColumn(name="member_id")
+	@JoinColumn(name = "member_id")
 	private Member member_id;
-	
-	@Column(name = "member_pw", updatable=false)
+
+	@Column(name = "member_pw", updatable = false)
 	private String member_pw;
-	
-	
 
 	public int getBoard_id() {
 		return board_id;
@@ -178,6 +175,5 @@ public class Board implements Serializable{
 	public void setMember_pw(String member_pw) {
 		this.member_pw = member_pw;
 	}
-	
-	
+
 }

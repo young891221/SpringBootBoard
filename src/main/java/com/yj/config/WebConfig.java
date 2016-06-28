@@ -22,6 +22,7 @@ import org.springframework.web.servlet.view.freemarker.FreeMarkerViewResolver;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import com.yj.aop.AspectTest;
 import com.yj.helper.ResourceHelper;
 import com.yj.logger.LoggerInterceptor;
 
@@ -86,6 +87,9 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 		return characterEncodingFilter;
 	}
 	
-	
+	@Bean
+	public AspectTest AspectTest(){
+		return new AspectTest();
+	}
 
 }

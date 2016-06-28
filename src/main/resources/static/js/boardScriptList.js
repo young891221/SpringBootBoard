@@ -6,7 +6,7 @@
 		subListExistFlag: false //검색결과 페이지시 기존 결과항목 리로딩용 flag값
 	};
 	
-	$(document).ready(function() { 
+	$(document).ready(function() {
 		objectList.selectOption = $('#selectOption');
 		objectList.optionContent = $('#optionContent');
 		objectList.selectContent = $('#selectContent');
@@ -70,6 +70,37 @@
 				}
 				
 				if(selectOptionBoardList.length != 0) {
+					var template = Handlebars.templates.boardSubList;
+					var handleData = {
+					    'list' : selectOptionBoardList
+					};
+					
+					Handlebars.registerHelper('isStatus', function (options) {
+						if(this.board_status != null && this.board_status == 0) {
+							return options.fn(this);
+						} else {
+						    return options.inverse(this);
+						}
+					});
+					
+					Handlebars.registerHelper('isUpdateDate', function (options) {
+						if(options != null) {
+							return options.fn(this);
+						} else {
+						    return options.inverse(this);
+						}
+					});
+					
+					var html2 = template(handleData);
+					$('#subList').append(html2);
+					objectList.subListExistFlag = true;
+				} else {
+					var hr = $('<hr>유효한 데이터가 없습니다</hr>');
+					$('#subList').append(hr);
+					objectList.subListExistFlag = true;
+				}
+				
+				/*if(selectOptionBoardList.length != 0) {
 					$(selectOptionBoardList).each(function(index){
 						
 						var tr = $('<tr></tr>');
@@ -102,7 +133,7 @@
 					var hr = $('<hr>유효한 데이터가 없습니다</hr>');
 					$('#subList').append(hr);
 					objectList.subListExistFlag = true;
-				}
+				}*/
 				
 		    },
 		    error: function (data) {
