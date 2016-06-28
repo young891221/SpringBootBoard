@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Stack;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
@@ -122,7 +123,7 @@ public class BoardRestController {
 				&& passwordEncoder.matches(member_pw, memberCheck.getMember_pw())) {
 			check = true;
 		}
-
+		
 		return check;
 	}
 

@@ -5,4 +5,5 @@ build/
 .project
 bower_components/
 node_modules/
-
+_classpath
+_project
