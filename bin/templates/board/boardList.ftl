@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>ZUM Board</title>
-<link href="/resources/vendor/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="/resources/vendor/bootstrap/docs/assets/css/bootstrap.css" rel="stylesheet" media="screen">
 <script src="/resources/vendor/jquery/dist/jquery.min.js"></script>
 <script src="/resources/vendor/handlebars/handlebars.min.js"></script>
 <script src="/resources/vendor/underscore/underscore-min.js"></script>

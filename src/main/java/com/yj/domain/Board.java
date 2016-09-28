@@ -5,6 +5,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -31,7 +33,7 @@ public class Board implements Serializable {
 	 * @GeneratedValue는 주키의 값을 위한 자동 생성 전략을 명시 AUTO는 특정 DB에 맞게 자동 선택
 	 */
 	@Id
-	//@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "board_id", updatable = false)
 	private int board_id;
 

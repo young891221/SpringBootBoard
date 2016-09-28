@@ -6,7 +6,7 @@
 		subListExistFlag: false //검색결과 페이지시 기존 결과항목 리로딩용 flag값
 	};
 	
-	$(document).ready(function() { 
+	$(document).ready(function() {
 		objectList.selectOption = $('#selectOption');
 		objectList.optionContent = $('#optionContent');
 		objectList.selectContent = $('#selectContent');
